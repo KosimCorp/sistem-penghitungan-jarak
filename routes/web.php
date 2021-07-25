@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'UserController@home')->name('home');
+
+Route::middleware('guest')->get('/login', 'UserController@login')->name('login');
+Route::middleware('guest')->post('/login', 'UserController@postLogin')->name('postLogin');
+Route::middleware('auth')->get('/logout', 'UserController@logout')->name('logout');
+Route::middleware('auth')->resource('sekolah', 'SekolahController');

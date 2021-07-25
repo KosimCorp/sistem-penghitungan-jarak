@@ -14,10 +14,10 @@
 					<a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modal-pencarian">Pencarian</a>
 				</li>
 				@endif
+				@auth
 				<li class="nav-item">
 					<a class="nav-link" href="{{ route('sekolah.index') }}">Daftar Sekolah</a>
 				</li>
-				@auth
 				<li class="nav-item">
 					<a class="nav-link" href="{{ route('logout') }}">Logout</a>
 				</li>

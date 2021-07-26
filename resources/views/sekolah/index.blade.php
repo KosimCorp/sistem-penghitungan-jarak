@@ -16,7 +16,8 @@
 							<th>No</th>
 							<th>Sekolah</th>
 							<th>Deskripsi</th>
-							<th>Posisi</th>
+							<th>Posisi X</th>
+							<th>Posisi Y</th>
 							<th>Aksi</th>
 						</tr>
 					</thead>
@@ -26,7 +27,8 @@
 							<td>{{ $loop->iteration }}</td>
 							<td>{{ $d->name }}</td>
 							<td>{{ $d->description }}</td>
-							<td>{{ $d->latitude }},{{ $d->longitude }}</td>
+							<td>{{ $d->latitude }}</td>
+							<td>{{ $d->longitude }}</td>
 							<td>
 								<a href="{{ route('sekolah.edit', $d->id) }}" class="mb-1 btn btn-primary btn-sm">Edit</a>
 								<a href="#" class="btn btn-danger btn-sm mb-1" onclick="confirm('Yakin ingin dihapus?') && document.querySelector('#form-delete-{{ $d->id }}').submit()">Hapus</a>

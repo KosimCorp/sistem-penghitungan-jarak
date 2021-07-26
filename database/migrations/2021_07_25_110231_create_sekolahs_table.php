@@ -19,6 +19,9 @@ class CreateSekolahsTable extends Migration
             $table->text('description');
             $table->string('latitude');
             $table->string('longitude');
+            $table->string('npsn');
+            $table->string('alamat');
+            $table->string('foto_sekolah');
             $table->timestamps();
         });
     }

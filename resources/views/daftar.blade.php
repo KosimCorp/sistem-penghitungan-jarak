@@ -26,7 +26,7 @@
 								<td>{{ $loop->iteration }}</td>
 								<td>{{ $d->name }}</td>
 								<td>{{ $d->alamat }}</td>
-								<td>{{ $d->alamat }}</td>
+								<td>{{ $d->npsn }}</td>
 								<td>{{ $d->latitude }}</td>
 								<td>{{ $d->longitude }}</td>
 								<td>{{ $d->description }}</td>

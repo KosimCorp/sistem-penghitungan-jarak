@@ -16,7 +16,7 @@ class UserController extends Controller
 
     public function login(Request $request)
     {
-        return view('home');
+        return redirect()->route('home');
     }
 
     public function postLogin(Request $request)

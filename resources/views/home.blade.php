@@ -19,7 +19,7 @@ html, body {
 @section('content')
 <main role="main" class="m-0 p-0 h-75">
 	<div class="row p-0 m-0 h-100 align-items-center justify-content-center">
-		<div id="map" class="col h-100">
+		<div id="map" class="col-10 h-100">
 		
 		</div>
 	</div>

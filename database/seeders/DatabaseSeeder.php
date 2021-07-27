@@ -20,5 +20,7 @@ class DatabaseSeeder extends Seeder
             'username' => 'admin',
             'password' => bcrypt('password'),
         ]);
+
+        $this->call(SekolahSeeder::class);
     }
 }

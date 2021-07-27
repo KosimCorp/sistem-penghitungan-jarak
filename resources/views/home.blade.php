@@ -47,8 +47,14 @@ html, body {
 			})
 			.openTooltip()
 			.on('click', () => {
-				infoModalTitleElement.innerText = '{{ $d->name }}';
-				infoModalHtmlElement.innerText = '{{ $d->description }}';
+				document.querySelector("#modal-info-foto").src = '{{ \Storage::url($d->foto) }}'
+				document.querySelector("#modal-info label[name='name']").innerText = '{{ $d->name }}';
+				document.querySelector("#modal-info label[name='alamat']").innerText = '{{ $d->alamat }}';
+				document.querySelector("#modal-info label[name='npsn']").innerText = '{{ $d->npsn }}';
+				document.querySelector("#modal-info label[name='latitude']").innerText = '{{ $d->latitude }}';
+				document.querySelector("#modal-info label[name='longitude']").innerText = '{{ $d->longitude }}';
+				document.querySelector("#modal-info label[name='description']").innerText = '{{ $d->description }}';
+
 				infoModalElement.show();
 			})
 	@endforeach

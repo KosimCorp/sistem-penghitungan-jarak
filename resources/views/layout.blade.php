@@ -14,6 +14,7 @@
 	@if(request()->routeIs('home'))
 		@include('pencarian')
 		@include('info')
+		@include('daftar')
 	@endif
 	
 	@yield('content')

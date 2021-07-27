@@ -16,12 +16,12 @@ class CreateSekolahsTable extends Migration
         Schema::create('sekolahs', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->text('description');
             $table->string('latitude');
             $table->string('longitude');
             $table->string('npsn');
             $table->string('alamat');
-            $table->string('foto_sekolah');
+            $table->string('foto');
+            $table->text('description');
             $table->timestamps();
         });
     }

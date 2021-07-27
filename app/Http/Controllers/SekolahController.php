@@ -39,10 +39,15 @@ class SekolahController extends Controller
     {
         $data = $request->validate([
             'name' => 'required',
-            'description' => 'required',
             'latitude' => 'required',
             'longitude' => 'required',
+            'npsn' => 'required',
+            'alamat' => 'required',
+            'foto' => 'image',
+            'description' => 'required',
         ]);
+        
+        $data['foto'] = $request->foto->store('images');
 
         Sekolah::create($data);
 
@@ -82,10 +87,22 @@ class SekolahController extends Controller
     {
         $data = $request->validate([
             'name' => 'required',
-            'description' => 'required',
             'latitude' => 'required',
             'longitude' => 'required',
+            'npsn' => 'required',
+            'alamat' => 'required',
+            'foto' => 'image',
+            'description' => 'required',
         ]);
+        
+        if ($request->foto)
+        {
+            $data['foto'] = $request->foto->store('images');
+        }
+        else
+        {
+            unset($data['foto']);
+        }
 
         $sekolah->update($data);
 

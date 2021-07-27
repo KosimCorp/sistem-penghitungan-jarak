@@ -23,6 +23,9 @@
 				</li>
 				@else
 				<li class="nav-item">
+					<a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modal-daftar">Daftar Sekolah</a>
+				</li>
+				<li class="nav-item">
 					<!-- Button trigger modal -->
 					<a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modal-login">
 						Login

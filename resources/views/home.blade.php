@@ -17,13 +17,21 @@ html, body {
 @endpush
 
 @section('content')
-<main role="main" class="m-0 p-0 h-75">
-	<div class="row p-0 m-0 h-100 align-items-center justify-content-center">
+<main role="main" class="m-0 p-0 h-100">
+	<div class="mb-4" align="center">
+		<img src="{{ asset('logo.webp') }}" width="75" height="75" class="d-inline-block">
+		<h4 class="d-inline-block"><b>Sistem Informasi Geografis</b></h4>
+	</div>
+	<div class="row p-0 m-0 h-75 align-items-center justify-content-center">
 		<div id="map" class="col-10 h-100">
 		
 		</div>
 	</div>
 </main>
+
+<footer class="footer bg-dark text-white p-3 text-center">
+	Copyright &copy; Pemetaan Zonasi Sekolah Menengah Atas (SMA) Berbasis <br>WEB GIS di Kota Sukabumi
+</footer>
 @endsection
 
 @push('js')
@@ -41,9 +49,21 @@ html, body {
 	var infoModalHtmlElement = document.querySelector("#modal-info .modal-body");
 
 	@foreach ($data as $d)
-		L.marker([{{ $d->latitude }}, {{ $d->longitude}}]).addTo(map)
+		L.marker([{{ $d->latitude }}, {{ $d->longitude}}], {
+			icon:  L.icon({
+			    iconUrl: 'sekolah.png',
+
+			    iconSize:     [50, 50], // size of the icon
+			    // shadowSize:   [50, 64], // size of the shadow
+			    // iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+			    // shadowAnchor: [4, 62],  // the same for the shadow
+			    // popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+			})
+		}).addTo(map)
 			.bindTooltip('<b>{{ $d->name }}</b>', {
 				permanent: true, 
+				direction: 'top',
+				offset: [0, -10]
 			})
 			.openTooltip()
 			.on('click', () => {

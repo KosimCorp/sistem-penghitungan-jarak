@@ -24,7 +24,7 @@
 					<label class="form-label">Jarak</label>
 					<div class="input-group">
 						<input type="text" name="jarak" class="form-control" readonly>
-						<span class="input-group-text">KM</span>
+						<span class="input-group-text">M</span>
 					</div>
 				</div>
 			</div>
@@ -75,7 +75,7 @@
 
 			jarak = L.latLng(posisiAwal).distanceTo(L.latLng(posisiAkhir));
 
-			jarakElement.value = Math.round(jarak / 1000);
+			jarakElement.value = Math.round(jarak);
 		}
 
 		posisiAwalElement.addEventListener('change', cekjarak);
@@ -88,7 +88,7 @@
 			oldPolyline = L.polyline([posisiAwal, posisiAkhir], {color: 'red'}).addTo(map);
 			oldMarkerJarak = L.marker(oldPolyline.getCenter(), {
 				icon: L.divIcon()
-			}).addTo(map).bindTooltip(Math.round(jarak / 1000) + ' KM').openTooltip();
+			}).addTo(map).bindTooltip(Math.round(jarak) + ' M').openTooltip();
 			oldFrom = L.marker(posisiAwal, { color: 'green'}).addTo(map).bindTooltip('Lokasi anda').openTooltip()
 
 			// zoom the map to the polyline

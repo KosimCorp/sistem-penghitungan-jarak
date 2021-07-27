@@ -14,7 +14,7 @@ class SekolahController extends Controller
      */
     public function index()
     {
-        $data = Sekolah::cursorPaginate(20);
+        $data = Sekolah::paginate(10);
 
         return view('sekolah.index', compact('data'));
     }

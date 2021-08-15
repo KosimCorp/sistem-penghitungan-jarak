@@ -15,7 +15,7 @@ class SekolahSeeder extends Seeder
      */
     public function run()
     {
-        Sekolah::createMany([
+        Sekolah::insert([
            [
              "name" => "SMA Negeri 1",
              "latitude" => "-6.9387784",

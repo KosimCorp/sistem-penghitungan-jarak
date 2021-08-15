@@ -145,10 +145,7 @@ class SekolahSeeder extends Seeder
              "latitude" => "-6.9368729",
              "longitude" => "106.9307844",
              "npsn" => "20221577",
-             "alamat" => """
-             JL. R.H. Didi Sukardi NO.12 Sukabumi, Citamiang, Kec. Citamiang\r\n
-             Kota Sukabumi
-             """,
+             "alamat" => "JL. R.H. Didi Sukardi NO.12 Sukabumi, Citamiang, Kec. Citamiang\r\nKota Sukabumi",
              "foto" => "images/r2Rqu5jH8lQdmcDFvW4nEUxnnrTaJcgDJbXBfsCy.jpg",
              "description" => "SMA PGRI 1",
          ],
@@ -166,10 +163,7 @@ class SekolahSeeder extends Seeder
              "latitude" => "-6.9207737",
              "longitude" => "106.9285812",
              "npsn" => "20221589",
-             "alamat" => """
-             JL. Bhayangkara NO. 240 Sukabumi, Selabatu, Kec. Cikole\r\n
-             Kota Sukabumi
-             """,
+             "alamat" => "JL. Bhayangkara NO. 240 Sukabumi, Selabatu, Kec. Cikole\r\nKota Sukabumi",
              "foto" => "images/43ytJkUlMibOIZzUdzpdlnWSpztB9xJhN0Y62T81.jpg",
              "description" => "SMA Kristen BPK Penabur",
          ],

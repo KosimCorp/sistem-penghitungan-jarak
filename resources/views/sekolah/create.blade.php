@@ -32,6 +32,10 @@
 				<input class="form-control" type="text" name="longitude" required>
 			</div>
 			<div class="mb-2">
+				<label class="form-label">Website</label>
+				<input class="form-control" type="text" name="website">
+			</div>
+			<div class="mb-2">
 				<label class="form-label">Deskripsi</label>
 				<textarea class="form-control" name="description" required></textarea>
 			</div>

@@ -73,6 +73,8 @@ html, body {
 				document.querySelector("#modal-info label[name='npsn']").innerText = `{{ $d->npsn }}`;
 				document.querySelector("#modal-info label[name='latitude']").innerText = `{{ $d->latitude }}`;
 				document.querySelector("#modal-info label[name='longitude']").innerText = `{{ $d->longitude }}`;
+				document.querySelector("#modal-info a[name='website']").innerText = `{{ $d->website }}`;
+				document.querySelector("#modal-info a[name='website']").href = `{{ $d->website }}`;
 				document.querySelector("#modal-info label[name='description']").innerText = `{{ $d->description }}`;
 
 				infoModalElement.show();

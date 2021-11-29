@@ -17,6 +17,7 @@
 								<th>NPSN</th>
 								<th>Latitude</th>
 								<th>Longitude</th>
+								<th>Website</th>
 								<th>Deskripsi</th>
 							</tr>
 						</thead>
@@ -29,6 +30,7 @@
 								<td>{{ $d->npsn }}</td>
 								<td>{{ $d->latitude }}</td>
 								<td>{{ $d->longitude }}</td>
+								<td><a href="{{ $d->website }}" target="_blank">{{ $d->website }}</a></td>
 								<td>{{ $d->description }}</td>
 							</tr>
 							@empty

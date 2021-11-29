@@ -47,6 +47,13 @@
 						</td>
 					</tr>
 					<tr>
+						<td>Website</td>
+						<td>:</td>
+						<td>
+							<a href="#" name="website"></a>
+						</td>
+					</tr>
+					<tr>
 						<td>Deskripsi</td>
 						<td>:</td>
 						<td>

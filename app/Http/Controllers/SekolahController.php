@@ -45,6 +45,7 @@ class SekolahController extends Controller
             'alamat' => 'required',
             'foto' => 'image',
             'description' => 'required',
+            'website' => 'bail',
         ]);
         
         $data['foto'] = $request->foto->store('images');
@@ -93,6 +94,7 @@ class SekolahController extends Controller
             'alamat' => 'required',
             'foto' => 'image',
             'description' => 'required',
+            'website' => 'bail',
         ]);
         
         if ($request->foto)

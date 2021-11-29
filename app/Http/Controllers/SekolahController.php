@@ -103,7 +103,7 @@ class SekolahController extends Controller
         }
         else
         {
-            unset($data['foto']);
+            // unset($data['foto']);
         }
 
         $sekolah->update($data);
